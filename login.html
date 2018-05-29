@@ -4,25 +4,18 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
     <meta charset="UTF-8">
-    <title>Work Document/Prueba Push</title>
+    <title>Login432</title>
     <style type="text/css">
-        /*
- * Specific styles of signin component
- */
-/*
- * General styles
- */
+
 body, html {
     height: 100%;
     background-repeat: no-repeat;
     background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
 }
-
 .card-container.card {
     max-width: 350px;
     padding: 40px 40px;
 }
-
 .btn {
     font-weight: 700;
     height: 36px;
@@ -31,10 +24,6 @@ body, html {
     user-select: none;
     cursor: default;
 }
-
-/*
- * Card component
- */
 .card {
     background-color: #F7F7F7;
     /* just in case there no content*/
@@ -49,7 +38,6 @@ body, html {
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
-
 .profile-img-card {
     width: 96px;
     height: 96px;
@@ -59,10 +47,6 @@ body, html {
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
-
-/*
- * Form styles
- */
 .profile-name-card {
     font-size: 16px;
     font-weight: bold;
@@ -70,7 +54,6 @@ body, html {
     margin: 10px 0 0;
     min-height: 1em;
 }
-
 .reauth-email {
     display: block;
     color: #404040;
@@ -85,14 +68,12 @@ body, html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 .form-signin #inputEmail,
 .form-signin #inputPassword {
     direction: ltr;
     height: 44px;
     font-size: 16px;
 }
-
 .form-signin input[type=email],
 .form-signin input[type=password],
 .form-signin input[type=text],
@@ -106,14 +87,12 @@ body, html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 .form-signin .form-control:focus {
     border-color: rgb(104, 145, 162);
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
 }
-
 .btn.btn-signin {
     /*background-color: #4d90fe; */
     background-color: rgb(104, 145, 162);
@@ -131,47 +110,25 @@ body, html {
     -webkit-transition: all 0.218s;
     transition: all 0.218s;
 }
-
 .btn.btn-signin:hover,
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
     background-color: rgb(12, 97, 33);
 }
-
 .forgot-password {
     color: rgb(104, 145, 162);
 }
-
 .forgot-password:hover,
 .forgot-password:active,
 .forgot-password:focus{
     color: rgb(12, 97, 33);
 }
     </style>
+
     <script type="text/javascript">
 $( document ).ready(function() {
-    // DOM ready
-
-    // Test data
-    /*
-     * To test the script you should discomment the function
-     * testLocalStorageData and refresh the page. The function
-     * will load some test data and the loadProfile
-     * will do the changes in the UI
-     */
-    // testLocalStorageData();
-    // Load profile if it exits
     loadProfile();
 });
-
-/**
- * Function that gets the data of the profile in case
- * thar it has already saved in localstorage. Only the
- * UI will be update in case that all data is available
- *
- * A not existing key in localstorage return null
- *
- */
 function getLocalProfile(callback){
     var profileImgSrc      = localStorage.getItem("PROFILE_IMG_SRC");
     var profileName        = localStorage.getItem("PROFILE_NAME");
@@ -184,10 +141,6 @@ function getLocalProfile(callback){
     }
 }
 
-/**
- * Main function that load the profile if exists
- * in localstorage
- */
 function loadProfile() {
     if(!supportsHTML5Storage()) { return false; }
     // we have to provide to the callback the basic
@@ -202,12 +155,6 @@ function loadProfile() {
     });
 }
 
-/**
- * function that checks if the browser supports HTML5
- * local storage
- *
- * @returns {boolean}
- */
 function supportsHTML5Storage() {
     try {
         return 'localStorage' in window && window['localStorage'] !== null;
@@ -236,13 +183,6 @@ function testLocalStorageData() {
 </head>
 
 <body>
-
-<!------ Include the above in your HEAD tag ---------->
-
-<!--
-    you can substitue the span of reauth email for a input with the email and
-    include the remember me checkbox
-    -->
 <!-- Inicio del header -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Mundial Rusia 2018</a>
@@ -280,6 +220,9 @@ function testLocalStorageData() {
   </div>
 </nav>
     <!-- Fin del header -->
+
+
+    
     <div class="container">
         <div class="card card-container">
             <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
@@ -291,7 +234,7 @@ function testLocalStorageData() {
                 <input type="password" id="inputPassword" class="form-control" placeholder="Constraseña" required>
                 <div id="remember" class="checkbox">
                     <label>
-                        <input type="checkbox" value="remember-me"> Recuerdames
+                        <input type="checkbox" value="remember-me"> Recuerdame
                     </label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Login</button>
@@ -301,13 +244,10 @@ function testLocalStorageData() {
             </a>
         </div><!-- /card-container -->
     </div><!-- /container -->
-<<<<<<< HEAD
+
+
+
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-=======
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
->>>>>>> 4eea4aa5a1268c8d486e35e596e76d31a8d46d12
 </body>
 </html>
